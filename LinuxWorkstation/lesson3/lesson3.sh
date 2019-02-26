@@ -58,7 +58,30 @@ cd ..
 
 #task 4
 
-sudo adduser --group sudo new_super_user
+adduser -G sudo new_super_user
+
+#task 5
+
+groupadd developers
+adduser -G developers dev1
+adduser -G developers dev2
+adduser -G developers dev3
+
+mkdir dev_folder
+chgrp developers dev_folder
+chmod 660 dev_folder
+
+#task 6
+
+mkdir dev_folder2
+chgrp developers dev_folder2
+chmod 640 dev_folder2
+
+#task 7
+
+mkdir temp2
+touch temp2/temp_file
+chmod -x temp2
 
 #clear
 cd ..
